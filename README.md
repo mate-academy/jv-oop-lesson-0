@@ -1,7 +1,7 @@
 # Working with services
 
 Your task is to implement a `login` method in `AuthenticationService` and `findByEmail` method in `UserService`.
-More details described in comments over the methods.
+More details are described in comments over the methods.
 
 To verify your solution please run `main` method in `Main` class. The output in console should be the following:
 ```
