@@ -1,7 +1,5 @@
 package mate.academy.service;
 
-import mate.academy.model.User;
-
 import static mate.academy.service.UserService.findByEmail;
 
 public class AuthenticationService {
