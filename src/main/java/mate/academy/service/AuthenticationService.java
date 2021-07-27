@@ -19,7 +19,7 @@ public class AuthenticationService {
                     &&
                     man.findByEmail(email).getPassword().equals(password)) {
                 return true;
-            };
+            }
         }
         return false;
     }
