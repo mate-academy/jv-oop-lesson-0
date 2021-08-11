@@ -1,5 +1,6 @@
 package mate.academy.service;
 
+
 public class AuthenticationService {
     /**
      * Imagine that some user wants to login to your site.
