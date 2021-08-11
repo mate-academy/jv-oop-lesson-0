@@ -1,5 +1,7 @@
 package mate.academy.service;
 
+import com.sun.source.tree.IfTree;
+
 public class AuthenticationService {
     /**
      * Imagine that some user wants to login to your site.
@@ -11,6 +13,10 @@ public class AuthenticationService {
      * Return false in any other cases.
      */
     public boolean login(String email, String password) {
+        UserService check = new UserService();
+        if (check.findByEmail(email) != null && check.findByEmail(email).getPassword().equals(password)) {
+            return true;
+        }
         return false;
     }
 }
