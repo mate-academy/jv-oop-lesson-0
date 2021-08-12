@@ -12,10 +12,9 @@ public class AuthenticationService {
      */
     public boolean login(String email, String password) {
         UserService checkUser = new UserService();
-        if (checkUser.findByEmail(email) != null
-                && checkUser.findByEmail(email).getEmail().equals(email)
-                && checkUser.findByEmail(email).getPassword().equals(password)) {
-            return true;
+        User user = checkUser.findByEmail(email);
+        if (user != null && password != null) {
+            return user.getPassword().equals(password);
         } else {
             return false;
         }
