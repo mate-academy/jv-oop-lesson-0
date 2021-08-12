@@ -16,11 +16,10 @@ public class UserService {
      * Return <code>null</code> if there is no suitable user
      */
     public User findByEmail(String email) {
-        if (email.equals("bob@i.ua")) {
-            return (mate.academy.model.User) User;
-        }
-        if (email.equals("alice@i.ua")) {
-            return (mate.academy.model.User) User;
+        for (int i = 0; i < users.length; i++) {
+            if (users[i].getEmail().equals(email)) {
+                return users[i];
+            }
         }
         return null;
     }
