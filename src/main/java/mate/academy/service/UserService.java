@@ -19,7 +19,7 @@ public class UserService {
             return null;
         }
         for (int i = 0; i < users.length; i++) {
-             if (email.equals(users[i].getEmail())) {
+            if (email.equals(users[i].getEmail())) {
                 return users[i];
             }
         }
