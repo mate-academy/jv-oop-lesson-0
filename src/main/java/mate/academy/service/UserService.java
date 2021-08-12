@@ -7,6 +7,7 @@ public class UserService {
             new User("bob@i.ua", "1234"),
             new User("alice@i.ua", "1234")
     };
+    private Object User;
 
     /**
      * Find user by email. All users are stored in <code>private static final User[] users</code>
@@ -15,6 +16,12 @@ public class UserService {
      * Return <code>null</code> if there is no suitable user
      */
     public User findByEmail(String email) {
+        if (email.equals("bob@i.ua")) {
+            return (mate.academy.model.User) User;
+        }
+        if (email.equals("alice@i.ua")) {
+            return (mate.academy.model.User) User;
+        }
         return null;
     }
 }
