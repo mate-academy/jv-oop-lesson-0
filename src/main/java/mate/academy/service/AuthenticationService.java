@@ -2,8 +2,6 @@ package mate.academy.service;
 
 import mate.academy.model.User;
 
-import mate.academy.service.UserService;
-
 public class AuthenticationService {
     /**
      * Imagine that some user wants to login to your site.
@@ -24,7 +22,6 @@ public class AuthenticationService {
         }
 
         String realPassword = tempUser.getPassword();
-
 
         return realPassword.equals(password);
 
