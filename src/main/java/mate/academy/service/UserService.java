@@ -2,6 +2,8 @@ package mate.academy.service;
 
 import mate.academy.model.User;
 
+import java.util.Objects;
+
 public class UserService {
     private static final User[] users = new User[] {
             new User("bob@i.ua", "1234"),
@@ -15,6 +17,16 @@ public class UserService {
      * Return <code>null</code> if there is no suitable user
      */
     public User findByEmail(String email) {
-        return null;
+        int userIndex = -1;
+        for (int i = 0; i < users.length; i++) {
+            if (Objects.equals(users[i].getEmail(), email)) {
+                userIndex = i;
+                break;
+            }
+        }
+        if (userIndex == -1) {
+            return null;
+        }
+        return users[userIndex];
     }
 }
