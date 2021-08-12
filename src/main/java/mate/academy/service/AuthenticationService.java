@@ -18,7 +18,7 @@ public class AuthenticationService {
         if (y == null) {
             return false;
         } else {
-            return y.getEmail().equals(email) && y.getPassword().equals(password);
+            return y.getPassword().equals(password);
         }
     }
 }
