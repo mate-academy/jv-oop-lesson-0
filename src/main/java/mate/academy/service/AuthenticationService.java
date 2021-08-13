@@ -18,13 +18,10 @@ public class AuthenticationService {
             return false;
         }
         UserService userService = new UserService();
-        User isUser = userService.findByEmail(email);
-        if (isUser == null) {
+        User user = userService.findByEmail(email);
+        if (user == null) {
             return false;
         }
-        if (isUser.getPassword().equals(password)) {
-            return true;
-        }
-        return false;
+        return user.getPassword().equals(password);
     }
 }
