@@ -17,13 +17,13 @@ public class AuthenticationService {
         if (email == null || password == null) {
             return false;
         }
-        if (email.isEmpty() || password.isEmpty()) {
+        UserService userService = new UserService();
+        User isUser = userService.findByEmail(email);
+        if (isUser == null) {
             return false;
         }
-        for (User user : UserService.users) {
-            if (user.getEmail().equals(email) && user.getPassword().equals(password)) {
-                return true;
-            }
+        if (isUser.getPassword().equals(password)) {
+            return true;
         }
         return false;
     }
