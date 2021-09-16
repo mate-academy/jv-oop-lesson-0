@@ -2,11 +2,10 @@ package mate.academy.service;
 
 import mate.academy.model.User;
 
-public class AuthenticationService {
-    UserService userService = new UserService();
+public class AuthenticationService extends UserService {
 
     public boolean login(String email, String password) {
-        User user = userService.findByEmail(email);
+        User user = findByEmail(email);
         if (user == null) {
             return false;
         }
