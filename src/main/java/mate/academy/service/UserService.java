@@ -2,7 +2,6 @@ package mate.academy.service;
 
 import java.util.Arrays;
 import java.util.Optional;
-
 import mate.academy.model.User;
 
 public class UserService {
@@ -17,6 +16,7 @@ public class UserService {
      * @return - user if his email is equal to passed email.
      * Return <code>null</code> if there is no suitable user
      */
+
     public Optional<User> findByEmail(String email) {
         return Arrays.stream(users).filter(findUser -> findUser.getEmail().equals(email))
                 .findFirst();
