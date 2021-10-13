@@ -16,7 +16,7 @@ public class AuthenticationService {
         User userToLogin = new UserService().findByEmail(email);
         boolean result = false;
         if (userToLogin != null) {
-        result = userToLogin.getPassword().equals(password);
+            result = userToLogin.getPassword().equals(password);
         }
         return result;
     }
