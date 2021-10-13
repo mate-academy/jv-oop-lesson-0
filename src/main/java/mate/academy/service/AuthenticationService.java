@@ -13,11 +13,11 @@ public class AuthenticationService {
      * Return false in any other cases.
      */
     public boolean login(String email, String password) {
-        User userToLogin = UserService.findByEmail(email);
-        if (userToLogin != null && userToLogin.getPassword() == password) {
-        return true;
-        } else {
-            return false;
+        User userToLogin = new UserService().findByEmail(email);
+        boolean result = false;
+        if (userToLogin != null) {
+        result = userToLogin.getPassword().equals(password);
         }
+        return result;
     }
 }
