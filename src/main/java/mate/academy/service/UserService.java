@@ -9,24 +9,20 @@ public class UserService {
     };
 
     public User findByEmail(String email) {
-        User x = null;
         for (User user : users) {
             if (email == user.getEmail()) {
-                x = user;
-                break;
+                return user;
             }
         }
-        return x;
+        return null;
     }
 
-    public User findByPassword(String password) {
-        User x = null;
+ public User findByPassword(String password) {
         for (User user : users) {
             if (password == user.getPassword()) {
-                x = user;
-                break;
+                return user;
             }
         }
-        return x;
+        return null;
     }
 }
