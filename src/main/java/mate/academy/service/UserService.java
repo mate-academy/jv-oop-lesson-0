@@ -22,13 +22,4 @@ public class UserService {
         }
         return null;
     }
-
-    public User findByPassword(String password) {
-        for (User target : users) {
-            if (target.getPassword().equals(password)) {
-                return target;
-            }
-        }
-        return null;
-    }
 }
