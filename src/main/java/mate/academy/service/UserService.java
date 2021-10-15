@@ -16,13 +16,4 @@ public class UserService {
         }
         return null;
     }
-
-    public User findByPassword(String password) {
-        for (User user : users) {
-            if (password == user.getPassword()) {
-                return user;
-            }
-        }
-        return null;
-    }
 }
