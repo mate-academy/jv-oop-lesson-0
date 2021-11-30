@@ -14,13 +14,11 @@ public class AuthenticationService {
      */
     public boolean login(String email, String password) {
         User enteredCredentials = new User(email, password);
-        User isThereSuchAUser;
-        //users
         UserService allUsers = new UserService();
-        isThereSuchAUser = allUsers.findByEmail(email);
+        User isThereSuchAUser = allUsers.findByEmail(email);
         if (isThereSuchAUser != null) {
-            if (enteredCredentials.equals(isThereSuchAUser))
-                return true;
+                if (enteredCredentials.getPassword().equals(isThereSuchAUser.getPassword()))
+                    return true;
             else return false;
         }
         else return false;
