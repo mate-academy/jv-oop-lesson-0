@@ -17,10 +17,13 @@ public class AuthenticationService {
         UserService allUsers = new UserService();
         User isThereSuchAUser = allUsers.findByEmail(email);
         if (isThereSuchAUser != null) {
-                if (enteredCredentials.getPassword().equals(isThereSuchAUser.getPassword()))
-                    return true;
-            else return false;
+            if (enteredCredentials.getPassword().equals(isThereSuchAUser.getPassword())) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
         }
-        else return false;
     }
 }
