@@ -4,23 +4,9 @@ import mate.academy.model.User;
 
 public class AuthenticationService {
     public boolean login(String email, String password) {
-        if (UserService.findByEmail(email) == null) {
-            return false;
-        } else {
-            User userLog = UserService.findByEmail(email);
-            if (userLog.getPassword().equals(password)) {
-                return true;
-            }
-        }
-        return false;
+        UserService userService = new UserService();
+        User userLog = userService.findByEmail(email);
+        return userService.findByEmail(email) != null && userLog.getPassword().equals(password);
     }
-    /**
-     * public boolean login(String email, String password) {
-     *     User userLog = UserService.findByEmail(email);
-     *     if( UserService.findByEmail(email) == null || !(userLog.getPassword().equals(password))){
-     *        return false;
-     *      }
-     *         return true;
-     *     }
-     **/
+
 }
