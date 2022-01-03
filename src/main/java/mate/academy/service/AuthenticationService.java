@@ -24,8 +24,6 @@ public class AuthenticationService {
                 login = true;
             }
         }
-
-
         return login;
     }
 }
