@@ -17,7 +17,7 @@ public class AuthenticationService {
             if (UserService.findByEmail(email).getPassword().equals(password)) {
                 result = true;
             }
-        } catch (Exception NullPointerException) {
+        } catch (Exception e) {
             return result;
         }
         return result;
