@@ -1,6 +1,5 @@
 package mate.academy;
 
-import mate.academy.model.User;
 import mate.academy.service.AuthenticationService;
 
 public class Main {
