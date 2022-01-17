@@ -5,6 +5,7 @@ import mate.academy.service.AuthenticationService;
 public class Main {
     private static final AuthenticationService authenticationService = new AuthenticationService();
 
+
     public static void main(String[] args) {
         test("bob@i.ua", "1234", true);
         test("alice@i.ua", "1234", true);
@@ -21,4 +22,5 @@ public class Main {
             System.out.println("Email: " + email + ", password " + password);
         }
     }
+
 }
