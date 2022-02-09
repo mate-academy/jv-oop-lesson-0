@@ -11,6 +11,6 @@ public class AuthenticationService extends UserService {
      * Return false in any other cases.
      */
     public boolean login(String email, String password) {
-        return  findByEmail(email) != null && findByEmail(email).getPassword().equals(password);
+        return findByEmail(email) != null && findByEmail(email).getPassword().equals(password);
     }
 }
