@@ -17,7 +17,9 @@ public class UserService {
      */
     public User findByEmail(String email) {
         for (User us : users) {
-            if (us.getEmail().equals(email)) return us;
+            if (us.getEmail().equals(email)) {
+                return us;
+            }
         }
         return null;
     }

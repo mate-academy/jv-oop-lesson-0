@@ -15,7 +15,9 @@ public class AuthenticationService extends UserService {
      */
     public boolean login(String email, String password) {
         for (User us : users) {
-            if (us.getEmail().equals(email) && us.getPassword().equals(password)) return true;
+            if (us.getEmail().equals(email) && us.getPassword().equals(password)) {
+                return true;
+            }
         }
         return false;
     }
