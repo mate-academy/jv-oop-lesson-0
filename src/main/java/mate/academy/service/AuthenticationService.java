@@ -17,8 +17,8 @@ public class AuthenticationService {
             String pass = user.getPassword();
             if (pass.equals(password)) {
                 return true;
-               }
             }
+        }
         return false;
     }
 }
