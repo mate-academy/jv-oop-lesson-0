@@ -12,13 +12,11 @@ public class AuthenticationService {
      */
 
     public boolean login(String email, String password) {
-        boolean res = false;
-        if (email.equals("bob@i.ua") && password.equals("1234")
-                || email.equals("alice@i.ua") && password.equals("1234")) {
-            res = true;
-        } else if (email.equals("john@i.ua") && password.equals("1234")) {
-            res = false;
+        UserService all = new UserService();
+        mate.academy.model.User user = all.findByEmail(email);
+        if (user != null && user.getPassword().equals(password)) {
+            return true;
         }
-        return res;
+        return false;
     }
 }
