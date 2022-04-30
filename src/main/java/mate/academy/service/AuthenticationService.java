@@ -14,7 +14,7 @@ public class AuthenticationService {
      */
     //UserService userService = new UserService();
     public boolean login(String email, String password) {
-        for(User user : UserService.users) {
+        for (User user : UserService.users) {
             if (email.equals(user.getEmail())) {
                 if (password.equals(user.getPassword())) {
                     return true;
