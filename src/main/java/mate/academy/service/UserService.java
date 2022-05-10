@@ -20,7 +20,6 @@ public class UserService {
                    return users[i];
                }
            }
-
-        return null;
+           return null;
     }
 }
