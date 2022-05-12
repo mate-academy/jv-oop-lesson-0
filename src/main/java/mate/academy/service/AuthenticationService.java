@@ -5,9 +5,6 @@ import mate.academy.model.User;
 public class AuthenticationService {
     private static UserService userService = new UserService();
 
-
-
-
     /**
      * Imagine that some user wants to login to your site.
      * You should check if user credentials (login and password) are valid or not.
