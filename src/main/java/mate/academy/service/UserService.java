@@ -24,9 +24,6 @@ public class UserService {
                 if (user.getEmail().contains(email)) {
                     return user;
                 }
-//                if (!user.getEmail().equals(email)) {
-//                    return null;
-//                }
             }
             return null;
         }
