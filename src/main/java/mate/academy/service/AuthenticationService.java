@@ -17,14 +17,12 @@ public class AuthenticationService {
         User userEmail = userService.findByEmail(email);
         if (userEmail == null) {
             return false;
-        }
-        else {
+        } else {
             if (userEmail == userService.findByEmail(email)
                     && password.equals(userService.findByEmail(email).getPassword())) {
 
                 return true;
-            }
-            else {
+            } else {
                 return false;
             }
         }
