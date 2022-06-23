@@ -11,13 +11,15 @@ public class AuthenticationService {
      * Return false in any other cases.
      */
     public boolean login(String email, String password) {
-        String user1_email = "bob@i.ua";
-        String password_user1 = "1234";
-        String user2_email = "alice@i.ua";
-        String password_user2 = "1234";
-        if (email.equals(user1_email) && password.equals(password_user1)) {
+        String user1email = "bob@i.ua";
+        String passworduser1 = "1234";
+        String user2email = "alice@i.ua";
+        String passworduser2 = "1234";
+        if (email.equals(user1email) && password.equals(passworduser1)
+                || email.equals(user2email) && password.equals(passworduser2)) {
             return true;
-        } else
-            return email.equals(user2_email) && password.equals(password_user2);
+        }
+        return false;
+
     }
 }
