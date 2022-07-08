@@ -1,3 +1,4 @@
+
 package mate.academy.service;
 import mate.academy.model.User;
 
@@ -15,8 +16,8 @@ public class UserService {
      */
     public boolean findByEmail(String email, String password) {
         boolean check = false;
-        for (int i = 0; i<users.length;i++) {
-            if ((users[i].getEmail() == email) && (users[i].getPassword() == password)){
+        for (int i = 0; i < users.length;i++) {
+            if ((users[i].getEmail().equals(email)) && (users[i].getPassword().equals(password))) {
                 check = true;
             }
         }
