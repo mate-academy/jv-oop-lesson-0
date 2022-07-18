@@ -9,7 +9,7 @@ public class UserService {
     };
 
     public User findByEmail(String email) {
-        for (User userUnit : users) {
+        for (User user : users) {
             if (userUnit.getEmail().equals(email)) {
                 return userUnit;
             }
