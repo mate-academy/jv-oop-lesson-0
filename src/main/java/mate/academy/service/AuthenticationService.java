@@ -18,12 +18,10 @@ public class AuthenticationService {
             User usr = check.findByEmail(email);
             if (email.equals(usr.getEmail()) && password.equals(usr.getPassword())) {
                 return true;
-            }
-            else {
+            } else {
                 return false;
             }
-        }
-        else {
+        } else {
             return false;
         }
     }
