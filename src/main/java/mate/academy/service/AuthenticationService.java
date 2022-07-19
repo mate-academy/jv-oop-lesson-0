@@ -16,9 +16,15 @@ public class AuthenticationService {
         UserService check = new UserService();
         if (check.findByEmail(email) != null) {
             User usr = check.findByEmail(email);
-            if (email.equals(usr.getEmail()) && password.equals(usr.getPassword())) { return true; }
-            else { return false; }
+            if (email.equals(usr.getEmail()) && password.equals(usr.getPassword())) {
+                return true;
+            }
+            else {
+                return false;
+            }
         }
-        else { return false; }
+        else {
+            return false;
+        }
     }
 }
