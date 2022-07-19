@@ -2,6 +2,8 @@ package mate.academy.service;
 
 import mate.academy.model.User;
 
+import java.io.PushbackReader;
+
 public class UserService {
     private static final User[] users = new User[] {
             new User("bob@i.ua", "1234"),
@@ -14,7 +16,12 @@ public class UserService {
      * @return - user if his email is equal to passed email.
      * Return <code>null</code> if there is no suitable user
      */
-    public User findByEmail(String email) {
+    public static User findByEmail(String email) {
+        for (User user : users) {
+            if (user.getEmail().equals(email)) {
+                return user;
+            }
+        }
         return null;
     }
 }
