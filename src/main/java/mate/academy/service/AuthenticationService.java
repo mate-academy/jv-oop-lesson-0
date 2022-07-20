@@ -14,18 +14,18 @@ public class AuthenticationService {
      * Return false in any other cases.
      */
     public boolean login(String email, String password) {
-
-        UserService noName = new UserService();
+        UserService userService  = new UserService();
         //получаем юзера с имэйлом и паролем или просто null
-        User userAvail = noName.findByEmail(email);
+        User user = userService.findByEmail(email);
         //проверка на null
-        if (userAvail == null) {
+        if (user == null) {
             return false;
         }
         //если не null, тогда начинаем проверять пароль
-        if (userAvail.getPassword().equals(password)) {
+        if (user.getPassword().equals(password)) {
             return true;
         }
+
         return false;
     }
 }
