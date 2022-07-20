@@ -18,6 +18,6 @@ public class AuthenticationService {
         //getting user
         User currentUser = userService.findByEmail(email);
         //checking all conditions
-        return true ? currentUser != null && currentUser.getPassword().equals(password) : false;
+        return currentUser != null && currentUser.getPassword().equals(password);
     }
 }
