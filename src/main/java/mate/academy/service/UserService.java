@@ -18,9 +18,9 @@ public class UserService {
 
         User userResult = new User("","");
 
-        for (int i = 0;i < users.length;i++) {
-            if (email.equals(users[i].getEmail())) {
-                userResult = users[i];
+        for (User u:users) {
+            if (email.equals(u.getEmail())) {
+                userResult = u;
             }
         }
 
