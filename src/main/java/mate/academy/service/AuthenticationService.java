@@ -1,5 +1,7 @@
 package mate.academy.service;
 
+import java.util.Objects;
+
 public class AuthenticationService {
     /**
      * Imagine that some user wants to login to your site.
@@ -11,6 +13,20 @@ public class AuthenticationService {
      * Return false in any other cases.
      */
     public boolean login(String email, String password) {
+        UserService base = new UserService();
+
+        for(int i=0; i<base.getSize(); i++)
+        {
+            if(Objects.equals(email, base.getMail(i)))
+            {
+                if(Objects.equals(password, base.getPass(i)))
+                {
+                    return true;
+                }
+            }
+        }
+
+
         return false;
     }
 }
