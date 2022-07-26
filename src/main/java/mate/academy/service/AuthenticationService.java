@@ -20,9 +20,8 @@ public class AuthenticationService extends UserService {
         if (user.getEmail().equals(findByEmail(email).getEmail())
                 && user.getPassword() == findByEmail(email).getPassword()) {
             return true;
-        } else {
-            return false;
-        }
+        } 
+        return false;
 
     }
 }
