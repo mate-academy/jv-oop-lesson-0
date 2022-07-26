@@ -8,20 +8,16 @@ public class UserService {
             new User("alice@i.ua", "1234")
     };
 
-    public int getSize()
-    {
+    public int getSize() {
         return users.length;
     }
-    public String getMail(int index)
-    {
+    public String getMail(int index) {
         return users[index].getEmail();
     }
 
-    public String getPass(int index)
-    {
+    public String getPass(int index) {
         return users[index].getPassword();
     }
-
     /**
      * Find user by email. All users are stored in <code>private static final User[] users</code>
      * @param email - the input parameter
