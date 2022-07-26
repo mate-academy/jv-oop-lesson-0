@@ -21,9 +21,8 @@ public class AuthenticationService {
         if (user.getEmail().equals(userService.findByEmail(email).getEmail())
                 && user.getPassword() == userService.findByEmail(email).getPassword()) {
             return true;
-        } else {
-            return false;
-        }
+        } 
+        return false;
 
     }
 }
