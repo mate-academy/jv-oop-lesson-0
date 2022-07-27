@@ -3,7 +3,6 @@ package mate.academy.service;
 import java.util.Objects;
 import mate.academy.model.User;
 
-
 public class AuthenticationService {
 
     public boolean login(String email, String password) {
