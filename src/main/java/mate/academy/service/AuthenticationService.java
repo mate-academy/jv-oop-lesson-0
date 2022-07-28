@@ -19,11 +19,7 @@ public class AuthenticationService {
         if (user == null) {
             return false;
         }
-        if (user.getEmail().equals(userService.findByEmail(email).getEmail())
-                && user.getPassword() == userService.findByEmail(email).getPassword()) {
-            return true;
-        } 
-        return false;
+        return password.equals(user.getPassword());
 
     }
 }
