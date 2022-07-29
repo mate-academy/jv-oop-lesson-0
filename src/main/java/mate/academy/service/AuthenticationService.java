@@ -13,7 +13,7 @@ public class AuthenticationService {
      * Return false in any other cases.
      */
     public boolean login(String email, String password) {
-        for (User user : UserService.getUsers() ) {
+        for (User user : UserService.getUsers()) {
             if (email.equals(user.getEmail())) {
                 if (password.equals(user.getPassword())) {
                     return true;

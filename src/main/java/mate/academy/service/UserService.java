@@ -10,8 +10,7 @@ public class UserService {
 
     public static User[] getUsers() {
         return users;
-    };
-
+    }
 
     /**
      * Find user by email. All users are stored in <code>private static final User[] users</code>
