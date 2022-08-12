@@ -4,7 +4,7 @@ public class AuthenticationService {
     private static final UserService findByEmail = new UserService();
 
     public boolean login(String email, String password) {
-        String EmailFor = findByEmail.findByEmail(email, password);
-        return EmailFor != null;
+        String emailFor = findByEmail.findByEmail(email, password);
+        return emailFor != null;
     }
 }
