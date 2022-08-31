@@ -17,7 +17,7 @@ public class UserService {
      */
     public boolean findByEmail(String email) {
         boolean equalEmail = false;
-        for (int i = 0; i<2; i++) {
+        for (int i = 0; i < 2; i++) {
             if (email.equals(users[i].getEmail())) {
                 equalEmail = true;
             }
@@ -27,7 +27,7 @@ public class UserService {
 
     public boolean findByPassword(String password) {
         boolean equalPass = false;
-        for (int i = 0; i<2; i++) {
+        for (int i = 0; i < 2; i++) {
             if (password.equals(users[i].getPassword())) {
                 equalPass = true;
             }
