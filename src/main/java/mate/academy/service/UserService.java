@@ -22,8 +22,4 @@ public class UserService {
         }
         return null;
     }
-
-    public User [] getUsers() {
-        return users;
-    }
 }
