@@ -8,10 +8,6 @@ public class UserService {
             new User("alice@i.ua", "1234")
     };
 
-    public static User[] getUsers() {
-        return users;
-    }
-
     public User findByEmail(String email) {
         if(email == null) {
             return null;
