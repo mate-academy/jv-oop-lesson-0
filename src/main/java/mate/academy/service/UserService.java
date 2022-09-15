@@ -9,11 +9,11 @@ public class UserService {
     };
 
     public User findByEmail(String email) {
-        if(email == null) {
+        if (email == null) {
             return null;
         }
-        for(User user : users){
-            if(user.getEmail().equals(email)){
+        for (User user : users) {
+            if (user.getEmail().equals(email)) {
                 return user;
             }
         }
