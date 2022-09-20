@@ -1,12 +1,13 @@
 package mate.academy.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class User {
     private String email;
     private String password;
 
-
     public User(String email, String password) {
-        System.out.println("hello");
         this.email = email;
         this.password = password;
     }
