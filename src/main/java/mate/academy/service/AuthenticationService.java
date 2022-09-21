@@ -1,6 +1,5 @@
 package mate.academy.service;
 
-import java.util.Objects;
 import mate.academy.model.User;
 
 public class AuthenticationService {
@@ -15,7 +14,10 @@ public class AuthenticationService {
      */
     public boolean login(String email, String password) {
         UserService service = new UserService();
+        User user = service.findByEmail(email);
 
-        return service.findByEmail(email) != null && Objects.equals(User.getPassword(), password);
+        return user != null && user.getPassword().equals(password);
+        //I understand how works this code, unfortunately I cannot do it myself :C
+        //I have done everything but "User user = service.findByEmail(email);" is not my idea
     }
 }
