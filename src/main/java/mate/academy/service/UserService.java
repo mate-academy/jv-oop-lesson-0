@@ -7,7 +7,6 @@ public class UserService {
             new User("bob@i.ua", "1234"),
             new User("alice@i.ua", "1234")
     };
-
     /**
      * Find user by email. All users are stored in <code>private static final User[] users</code>
      *
@@ -24,7 +23,6 @@ public class UserService {
         }
         return null;
     }
-
 
 }
 
