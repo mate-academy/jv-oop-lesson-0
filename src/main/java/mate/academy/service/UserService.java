@@ -10,7 +10,6 @@ public class UserService {
 
     };
 
-
     /**
      * Find user by email. All users are stored in <code>private static final User[] users</code>
      *
@@ -19,9 +18,10 @@ public class UserService {
      * Return <code>null</code> if there is no suitable user
      */
     public User findByEmail(String email) {
+
         return null;
     }
-    }
+}
 
 
 
