@@ -18,9 +18,9 @@ public class UserService {
         if (email == null) {
             return null;
         }
-        for (int i = 0; i < users.length; i++) {
-            if (email.equals(users[i].getEmail())) {
-                return users[i];
+        for (User user: users) {
+            if (email.equals(user.getEmail())) {
+                return user;
             }
         }
         return null;
