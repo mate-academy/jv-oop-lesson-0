@@ -8,7 +8,7 @@ public class UserService {
             new User("alice@i.ua", "1234")
     };
 
-    public static User[] getUsers() {
+    public User[] getUsers() {
         return users;
     }
 

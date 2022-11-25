@@ -11,7 +11,8 @@ public class AuthenticationService {
      * Return false in any other cases.
      */
     public boolean login(String email, String password) {
-        var users = UserService.getUsers();
+        UserService service = new UserService();
+        var users = service.getUsers();
         for (var i = 0; i < users.length; i++) {
             if (users[i].getEmail().equals(email) && users[i].getPassword().equals(password)) {
                 return true;
