@@ -1,3 +1,4 @@
+
 package mate.academy;
 
 import mate.academy.service.AuthenticationService;
@@ -22,3 +23,4 @@ public class Main {
         }
     }
 }
+
