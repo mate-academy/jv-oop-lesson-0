@@ -21,8 +21,7 @@ public class AuthenticationService {
         String pass = result.getPassword();
         if (em.equals(email) && pass.equals(password)) {
             return true;
-        }
-        else {
+        } else {
             return false;
         }
     }
