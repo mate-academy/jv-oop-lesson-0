@@ -1,6 +1,7 @@
 package mate.academy.service;
 
 import mate.academy.model.User;
+
 public class AuthenticationService {
     /**
      * Imagine that some user wants to login to your site.
@@ -18,5 +19,5 @@ public class AuthenticationService {
             return true;
         }
         return false;
-       }
+    }
 }
