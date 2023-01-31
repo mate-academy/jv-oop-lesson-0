@@ -15,12 +15,11 @@ public class UserService {
      */
 
     public User findByEmail(String email) {
-        int userMail = 0;
-        for (int i = 0; i < users.length; i++) {
-            if (users[i].getEmail().equals(email)) {
-                userMail = i;
+        for (User user : users) {
+            if (user.getEmail().equals(email)) {
+                return user;
             }
         }
-        return users[userMail];
+        return null;
     }
 }
