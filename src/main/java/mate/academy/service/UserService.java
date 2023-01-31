@@ -16,13 +16,13 @@ public class UserService {
      */
 
     public User findByEmail(String email) {
-       if (email != null){
-           for (User user : users) {
-               if (email.equals(user.getEmail())) {
-                   return user;
-               }
-           }
-       }
-       return null;
+        if (email != null) {
+            for (User user : users) {
+                if (email.equals(user.getEmail())) {
+                    return user;
+                }
+            }
+        }
+        return null;
     }
 }
