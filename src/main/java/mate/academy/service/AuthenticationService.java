@@ -1,5 +1,7 @@
 package mate.academy.service;
 
+import  mate.academy.model.User;
+
 public class AuthenticationService {
     /**
      * Imagine that some user wants to login to your site.
@@ -11,6 +13,16 @@ public class AuthenticationService {
      * Return false in any other cases.
      */
     public boolean login(String email, String password) {
-        return false;
+        User founded = UserService.findByEmail(email);
+        if (founded != null) {
+            if (founded.getPassword() == password) {
+                return true;
+            }
+            else {
+                return  false;
+            }
+        } else {
+            return false;
+        }
     }
 }
