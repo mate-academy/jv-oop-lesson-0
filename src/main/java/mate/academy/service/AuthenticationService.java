@@ -1,6 +1,6 @@
 package mate.academy.service;
 
-import  mate.academy.model.User;
+import mate.academy.model.User;
 
 public class AuthenticationService {
     /**
@@ -17,9 +17,8 @@ public class AuthenticationService {
         if (founded != null) {
             if (founded.getPassword() == password) {
                 return true;
-            }
-            else {
-                return  false;
+            } else {
+                return false;
             }
         } else {
             return false;
