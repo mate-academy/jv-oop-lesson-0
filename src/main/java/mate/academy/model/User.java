@@ -1,6 +1,6 @@
 package mate.academy.model;
 
-public class User{
+public class User {
     private final String email;
     private final String password;
 
