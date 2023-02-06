@@ -14,14 +14,6 @@ public class AuthenticationService {
      */
     public boolean login(String email, String password) {
         User founded = UserService.findByEmail(email);
-        if (founded != null) {
-            if (founded.getPassword() == password) {
-                return true;
-            } else {
-                return false;
-            }
-        } else {
-            return false;
-        }
+        return founded == null ? false : founded.getPassword() == password;
     }
 }
