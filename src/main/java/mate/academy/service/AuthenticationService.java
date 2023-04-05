@@ -12,6 +12,7 @@ public class AuthenticationService {
     public void setUserService(UserService userService) {
         this.userService = userService;
     }
+
     /**
      * Imagine that some user wants to login to your site.
      * You should check if user credentials (login and password) are valid or not.
@@ -21,13 +22,8 @@ public class AuthenticationService {
      * @return true if user by email exists and passed password is equal to user's password.
      * Return false in any other cases.
      */
-
     public boolean login(String email, String password) {
-        User userEmail = userService.findByEmail(email);
-
-        if (userEmail == null) {
-            return false;
-        }
-        return userEmail.getPassword().equals(password);
+        User user = userService.findByEmail(email);
+        return user != null && user.getPassword().equals(password);
     }
 }
