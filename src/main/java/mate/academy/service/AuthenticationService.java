@@ -1,7 +1,7 @@
 package mate.academy.service;
 
 public class AuthenticationService {
-    UserService userService = new UserService();
+    private UserService userService = new UserService();
     
     /**
      * Imagine that some user wants to login to your site.
