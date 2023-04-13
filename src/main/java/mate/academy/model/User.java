@@ -2,7 +2,7 @@ package mate.academy.model;
 
 public class User {
     private String email;
-    private String password;
+    private static String password;
 
     public User(String email, String password) {
         this.email = email;
@@ -13,7 +13,7 @@ public class User {
         return email;
     }
 
-    public String getPassword() {
+    public static String getPassword() {
         return password;
     }
 }
