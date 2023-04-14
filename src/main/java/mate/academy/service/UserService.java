@@ -23,9 +23,8 @@ public class UserService {
             if (email.equals(checkUser.getEmail())) {
                 return checkUser;
             }
-        }
             return null;
-
+        }
     }
 }
 
