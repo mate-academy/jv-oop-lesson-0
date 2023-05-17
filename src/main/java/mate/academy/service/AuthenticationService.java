@@ -15,14 +15,13 @@ public class AuthenticationService {
     public boolean login(String email, String password) {
         UserService userService = new UserService();
         User user = userService.findByEmail(email);
-        if(user == null){
+        if (user == null) {
             System.out.println("Error, no such email address");
             return false;
         }
-        if(user.getPassword().equals(password)){
+        if (user.getPassword().equals(password)) {
             return true;
-        }
-        else {
+        } else {
             System.out.println("Error, wrong password");
             return false;
         }
