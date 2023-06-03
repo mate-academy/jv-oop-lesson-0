@@ -23,7 +23,7 @@ public class UserService {
         return null;
     }
 
-    public boolean isPasswordCorrect (String email, String password) {
+    public boolean isPasswordCorrect(String email, String password) {
         for (User user : users) {
             if (user.getEmail().equals(email) && user.getPassword().equals(password)) {
                 return true;
