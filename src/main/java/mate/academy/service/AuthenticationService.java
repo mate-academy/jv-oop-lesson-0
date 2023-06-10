@@ -16,9 +16,7 @@ public class AuthenticationService {
         if(UserService.findByEmail(emailEntered) == null){
             return false;
         } else {
-            // !!впихнуть в условие!!
-            String realPassword = UserService.findByEmail(emailEntered).getPassword();
-            if(passwordEntered.equals(realPassword)){
+            if(passwordEntered.equals(UserService.findByEmail(emailEntered).getPassword())){
                 return true;
             } else {
                 return false;
