@@ -15,17 +15,13 @@ public class UserService {
      * Return <code>null</code> if there is no suitable user
      */
     public User findByEmail(String email) {
-        //Create temporary variable for saving result of searching
-        User temp = null;
+        User user = null;
 
-        //Check each user in the database to find a suitable one
-        //If it isn't found, it will be null
-        for (User t : users) {
-            if (t.getEmail().equals(email)) {
-                temp = t;
+        for (User currentUser : users) {
+            if (currentUser.getEmail().equals(email)) {
+                user = currentUser;
             }
         }
-        //Return the result of searching
-        return temp;
+        return user;
     }
 }
