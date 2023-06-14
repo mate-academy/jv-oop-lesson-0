@@ -12,9 +12,9 @@ public class UserService {
         if (email == null) {
             return null;
         }
-        for (User i : users) {
-            if (i.getEmail().equals(email)) {
-                return i;
+        for (User user : users) {
+            if (user.getEmail().equals(email)) {
+                return user;
             }
         }
         return null;
