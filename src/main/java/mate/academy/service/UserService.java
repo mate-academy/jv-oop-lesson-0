@@ -19,7 +19,6 @@ public class UserService {
         if (email == null) {
             return null;
         }
-
         for (User user : users) {
             String userEmail = user.getEmail();
             if (email.equals(userEmail)) {
@@ -27,9 +26,5 @@ public class UserService {
             }
         }
         return null;
-    }
-
-    public static User[] getUser() {
-        return users;
     }
 }
