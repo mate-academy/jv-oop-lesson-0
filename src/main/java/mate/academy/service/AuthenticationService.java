@@ -15,14 +15,10 @@ public class AuthenticationService {
     private UserService userService = new UserService();
 
     public boolean login(String email, String password) {
-        User nativeUser = userService.findByEmail(email);
-
-        if (nativeUser == null) {
+        User foundUser = userService.findByEmail(email);
+        if (foundUser == null) {
             return false;
-        } else {
-            return nativeUser.getEmail().equals(email)
-                    && nativeUser.getPassword().equals(password);
         }
-
+        return foundUser.getPassword().equals(password);
     }
 }
