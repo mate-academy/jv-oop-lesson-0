@@ -19,8 +19,8 @@ public class UserService {
             return null;
         }
 
-        for(User user : users){
-            if(email.equals(user.getEmail())) {
+        for (User user : users) {
+            if (email.equals(user.getEmail())) {
                 return user;
             }
         }
