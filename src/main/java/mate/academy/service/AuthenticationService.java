@@ -2,8 +2,6 @@ package mate.academy.service;
 
 import mate.academy.model.User;
 
-import java.nio.file.attribute.UserPrincipal;
-
 public class AuthenticationService {
     /**
      * Imagine that some user wants to login to your site.
@@ -15,12 +13,10 @@ public class AuthenticationService {
      * Return false in any other cases.
      */
     public boolean login(String email, String password) {
-        UserService UsersService = new UserService();
-        User currentUser = UsersService.findByEmail(email);
-        if(currentUser != null)
-        {
-            if(currentUser.getPassword() == password)
-            {
+        UserService userService = new UserService();
+        User currentUser = userService.findByEmail(email);
+        if (currentUser != null) {
+            if (currentUser.getPassword().equals(password)) {
                 return true;
             }
         }
