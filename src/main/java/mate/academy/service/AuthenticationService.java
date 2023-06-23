@@ -21,9 +21,8 @@ public class AuthenticationService {
         }
         if (user.getPassword().equals(password)) {
             return true;
-        } else {
-            System.out.println("Error, wrong password");
-            return false;
         }
+        System.out.println("Error, wrong password");
+        return false;
     }
 }
