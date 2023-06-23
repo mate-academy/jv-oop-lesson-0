@@ -3,6 +3,7 @@ package mate.academy.service;
 public class AuthenticationService {
 
     public boolean login(String email, String password) {
+        //just test
         if (UserService.findByEmail(email) == null) {
             return false;
         }
