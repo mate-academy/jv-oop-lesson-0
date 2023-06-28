@@ -14,6 +14,7 @@ public class Main {
 
     private static void test(String email, String password, boolean expected) {
         boolean actual = authenticationService.login(email, password);
+        
         if (expected == actual) {
             System.out.println("Test passed for email: " + email + " and password " + password);
         } else {
