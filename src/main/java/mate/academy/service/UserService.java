@@ -22,7 +22,6 @@ public class UserService {
         }
         return null;
     }
-    // the same for the password
 
     public User findByPassword(String password) {
         for (User user : users) {
