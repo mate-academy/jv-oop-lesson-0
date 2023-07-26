@@ -3,7 +3,6 @@ package mate.academy.service;
 import mate.academy.model.User;
 
 public class AuthenticationService {
-
     private static final UserService USER_SERVICE;
 
     static {
