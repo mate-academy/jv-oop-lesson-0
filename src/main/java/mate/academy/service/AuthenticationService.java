@@ -13,7 +13,7 @@ public class AuthenticationService {
     public boolean login(String email, String password) {
         UserService temp = new UserService();
         if (temp.findByEmail(email) != null) {
-            if (temp.findByEmail(email).getPassword() == password) {
+            if (temp.findByEmail(email).getPassword().equals(password)) {
                 return true;
             }
         }
