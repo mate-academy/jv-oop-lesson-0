@@ -23,12 +23,4 @@ public class UserService {
         return null;
     }
 
-    public User findByPassword(String password) {
-        for (User user : users) {
-            if (user.getPassword().equals(password)) {
-                return user;
-            }
-        }
-        return null;
-    }
 }
