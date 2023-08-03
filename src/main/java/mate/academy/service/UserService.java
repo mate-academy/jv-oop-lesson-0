@@ -18,11 +18,8 @@ public class UserService {
         for (User user : users) {
             if (user.getEmail() == email) {
                 return user;
-
             }
-
         }
         return null;
-
     }
 }
