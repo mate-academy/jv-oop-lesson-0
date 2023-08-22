@@ -1,9 +1,9 @@
 package mate.academy;
 
-import mate.academy.service.AuthenticationService;
+import mate.academy.service.authenticationService;
 
 public class Main {
-    private static final AuthenticationService authenticationService = new AuthenticationService();
+    private static final authenticationService authenticationService = new authenticationService();
 
     public static void main(String[] args) {
         test("bob@i.ua", "1234", true);
