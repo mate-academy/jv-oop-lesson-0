@@ -2,11 +2,14 @@ package mate.academy.service;
 
 import mate.academy.model.User;
 
-public class UserService {
+public class UserService extends User {
     private static final User[] users = new User[] {
             new User("bob@i.ua", "1234"),
             new User("alice@i.ua", "1234")
     };
+    public User[] getUsers(){
+        return users;
+    }
 
     /**
      * Find user by email. All users are stored in <code>private static final User[] users</code>
@@ -15,6 +18,12 @@ public class UserService {
      * Return <code>null</code> if there is no suitable user
      */
     public User findByEmail(String email) {
+        for (User user:
+             users) {
+            if(user.getEmail().equals(email)){
+                return user;
+            }
+        }
         return null;
     }
 }
