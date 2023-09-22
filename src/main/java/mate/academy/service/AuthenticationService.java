@@ -16,15 +16,11 @@ public class AuthenticationService {
 
     public boolean login(String email, String password) {
         User[] users = userService.getUsers();
-        boolean result = false;
         for (User user : users) {
             if (user.getEmail().equals(email) && user.getPassword().equals(password)) {
-                result = true;
-                break;// Пользователь найден
-            } else {
-                result = false;
+                return true;
             }
         }
-        return result;
+        return false;
     }
 }
