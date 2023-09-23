@@ -3,7 +3,8 @@ package mate.academy;
 import mate.academy.service.AuthenticationService;
 
 public class Main {
-    private static final AuthenticationService authenticationService = new AuthenticationService();
+    private static final AuthenticationService authenticationService =
+            new AuthenticationService();
 
     public static void main(String[] args) {
         test("bob@i.ua", "1234", true);
@@ -15,9 +16,11 @@ public class Main {
     private static void test(String email, String password, boolean expected) {
         boolean actual = authenticationService.login(email, password);
         if (expected == actual) {
-            System.out.println("Test passed for email: " + email + " and password " + password);
+            System.out.println("Test passed for email: " + email
+                    + " and password " + password);
         } else {
-            System.out.print("Expected to receive " + expected + ", but was " + actual + ". ");
+            System.out.print("Expected to receive " + expected
+                    + ", but was " + actual + ". ");
             System.out.println("Email: " + email + ", password " + password);
         }
     }
