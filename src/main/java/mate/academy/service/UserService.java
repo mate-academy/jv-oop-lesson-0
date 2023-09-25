@@ -9,21 +9,23 @@ public class UserService {
             new User("alice@i.ua", "1234")
     };
 
+    public static User[] getUsers() {
+        return users;
+    }
+
     /**
      * Find user by email. All users are stored in <code>private static final User[] users</code>
      * @param email - the input parameter
      * @return - user if his email is equal to passed email.
      * Return <code>null</code> if there is no suitable user
      */
+
     public User findByEmail(String email) {
-        if (Objects.equals(email, users[0].getEmail())) {
-            return users[0];
+        for (User user : users) {
+            if (Objects.equals(user.getEmail(), email)) {
+                return user;
+            }
         }
-
-        if (Objects.equals(email, users[1].getEmail())) {
-            return users[1];
-        }
-
         return null;
     }
 }
