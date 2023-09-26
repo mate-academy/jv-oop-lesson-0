@@ -18,11 +18,7 @@ public class AuthenticationService {
         User user = userService.findByEmail(email);
 
         if (user != null) {
-            if (user.getPassword().equals(password)) {
-                return true;
-            }
-        }
-
+           return user != null && user.getPassword().equals(password);           
         return false;
     }
 }
