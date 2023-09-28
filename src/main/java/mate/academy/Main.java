@@ -1,6 +1,9 @@
 package mate.academy;
 
 import mate.academy.service.AuthenticationService;
+import mate.academy.service.UserService;
+
+import java.util.Arrays;
 
 public class Main {
     private static final AuthenticationService authenticationService = new AuthenticationService();
@@ -10,6 +13,8 @@ public class Main {
         test("alice@i.ua", "1234", true);
         test("john@i.ua", "1234", false);
         test("bob@i.ua", "qwerty", false);
+
+
     }
 
     private static void test(String email, String password, boolean expected) {
