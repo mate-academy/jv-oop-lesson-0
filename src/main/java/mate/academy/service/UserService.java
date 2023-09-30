@@ -16,7 +16,7 @@ public class UserService {
      */
     public static User findByEmail(String email) {
         for (User own :users) {
-            if (own.getEmail().equals(email) ){
+            if (own.getEmail().equals(email)) {
                 return own;
             }
         }
