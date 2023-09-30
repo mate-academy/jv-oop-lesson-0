@@ -1,10 +1,10 @@
 package mate.academy.service;
 
-import static mate.academy.service.UserService.users;
-
 import mate.academy.model.User;
 
 public class AuthenticationService {
+    private User[] users;
+
     /**
      * Imagine that some user wants to login to your site.
      * You should check if user credentials (login and password) are valid or not.
