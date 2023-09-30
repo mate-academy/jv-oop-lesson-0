@@ -14,7 +14,12 @@ public class UserService {
      * @return - user if his email is equal to passed email.
      * Return <code>null</code> if there is no suitable user
      */
-    public User findByEmail(String email) {
+    public static User findByEmail(String email) {
+        for (User own :users) {
+            if (own.getEmail().equals(email)) {
+                return own;
+            }
+        }
         return null;
     }
 }
