@@ -10,9 +10,6 @@ public class AuthenticationService {
     }
 
     public boolean login(String email, String password) {
-        if (userService == null) {
-            throw new IllegalStateException("UserService is not properly initialized.");
-        }
         User user = userService.findByEmail(email);
         return user != null && user.getPassword().equals(password);
     }
