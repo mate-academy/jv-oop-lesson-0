@@ -13,10 +13,12 @@ public class AuthenticationService {
     private UserService userService = new UserService();
 
     public boolean login(String email, String password) {
-        if (userService.findByEmail(email) == null) {
+        try {
+            if (userService.findByEmail(email).getPassword().equals(password)) {
+                return true;
+            }
+        } catch (NullPointerException error) {
             return false;
-        } else if (userService.findByEmail(email).getPassword().equals(password)) {
-            return true;
         }
         return false;
     }
