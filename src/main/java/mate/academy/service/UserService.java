@@ -17,13 +17,9 @@ public class UserService {
     public User findByEmail(String email) {
         for (User user : users) {
             if (email.equals(user.getEmail())) {
-                return user; // Возвращаем пользователя, если email совпал
+                return user;
             }
         }
-        return null; // Возвращаем null, если не нашли пользователя
-    }
-
-    public User[] getUsers() {
-        return users;
+        return null;
     }
 }
