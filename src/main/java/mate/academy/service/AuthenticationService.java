@@ -9,7 +9,7 @@ public class AuthenticationService {
         this.userService = new UserService();
     }
 
-    public AuthenticationService(UserService userService){
+    public AuthenticationService(UserService userService) {
         this.userService = userService;
     }
 
@@ -25,7 +25,7 @@ public class AuthenticationService {
     public boolean login(String email, String password) {
         User user = userService.findByEmail(email);
 
-        if ((user != null) && user.getPassword().equals(password)){
+        if ((user != null) && user.getPassword().equals(password)) {
             return true;
         }
         return false;
