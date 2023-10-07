@@ -1,10 +1,9 @@
 package mate.academy.service;
 
-import mate.academy.model.User;
-
 import java.util.Arrays;
 import java.util.NoSuchElementException;
 import java.util.Objects;
+import mate.academy.model.User;
 
 public class UserService {
     private static final User[] users = new User[] {
