@@ -22,7 +22,7 @@ public class AuthenticationService {
         if (emailUserFound.findByEmail(email) != null) {
             User posUser = emailUserFound.findByEmail(email);
             String mbPass = posUser.getPassword();
-            if (password == mbPass) {
+            if (password.equals(mbPass)) {
                 return true;
             }
         }
