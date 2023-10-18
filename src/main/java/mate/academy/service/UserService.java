@@ -20,7 +20,7 @@ public class UserService {
      */
     public User findByEmail(String email) {
         for (int i = 0; i < UserService.getUsers().length; i++) {
-            if(UserService.getUsers()[i].getEmail().equals(email) ){
+            if (UserService.getUsers()[i].getEmail().equals(email)) {
                 return UserService.getUsers()[i];
             }
         }
