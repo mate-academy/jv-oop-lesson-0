@@ -9,7 +9,9 @@ public class UserService {
     };
 
     public static User[] getUsers() {
+
         return users;
+
     }
 
     /**
