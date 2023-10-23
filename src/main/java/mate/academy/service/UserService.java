@@ -14,7 +14,12 @@ public class UserService {
      * @return - user if his email is equal to passed email.
      * Return <code>null</code> if there is no suitable user
      */
-    public User findByEmail(String email) {
+    public User findByEmail(String email, String password) {
+        for (User user : users) {
+            if (email.equals(user.getEmail()) && password.equals(user.getPassword())) {
+                return user;
+            }
+        }
         return null;
     }
 }
