@@ -21,4 +21,5 @@ public class Main {
             System.out.println("Email: " + email + ", password " + password);
         }
     }
+
 }
