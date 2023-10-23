@@ -10,6 +10,7 @@ public class Main {
         test("alice@i.ua", "1234", true);
         test("john@i.ua", "1234", false);
         test("bob@i.ua", "qwerty", false);
+
     }
 
     private static void test(String email, String password, boolean expected) {
