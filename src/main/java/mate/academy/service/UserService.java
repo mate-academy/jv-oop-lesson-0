@@ -8,13 +8,13 @@ public class UserService {
             new User("alice@i.ua", "1234")
     };
 
-    /**
-     * Find user by email. All users are stored in <code>private static final User[] users</code>
-     * @param email - the input parameter
-     * @return - user if his email is equal to passed email.
-     * Return <code>null</code> if there is no suitable user
-     */
-    public User findByEmail(String email) {
+
+    public String findByEmail(String email, String password) {
+        for (int i =0; i < users.length; i ++){
+            if (users[i].getEmail() == email && users[i].getPassword() == password){
+                return email;
+            }
+        }
         return null;
     }
 }
