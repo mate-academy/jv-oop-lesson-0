@@ -11,6 +11,11 @@ public class AuthenticationService {
      * Return false in any other cases.
      */
     public boolean login(String email, String password) {
+        UserService userService = new UserService();
+        mate.academy.model.User user = userService.findByEmail(email);
+        if (user != null) {
+            return user.getPassword().equals(password);
+        }
         return false;
     }
 }
