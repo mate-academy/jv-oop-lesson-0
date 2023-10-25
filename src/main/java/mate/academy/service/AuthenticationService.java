@@ -16,11 +16,10 @@ public class AuthenticationService {
     private final UserService service = new UserService();
 
     public boolean login(String email, String password) {
+
         User user = service.findByEmail(email);
         if (user != null) {
-
             return user.getPassword().equals(password);
-
         }
         return false;
     }
