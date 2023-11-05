@@ -22,11 +22,6 @@ public class UserService {
                 requiredUser = user;
             }
         }
-
         return requiredUser;
-    }
-
-    public static User[] getUsers() {
-        return users;
     }
 }

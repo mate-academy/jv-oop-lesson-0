@@ -6,7 +6,7 @@ public class AuthenticationService {
     /**
      * Imagine that some user wants to login to your site.
      * You should check if user credentials (login and password) are valid or not.
-     * All users are stored in <code>UserService</code> class.
+     * All users are stored in <code>UserService</code> clgass.
      *
      * @param email    - user's email
      * @param password - user's password
@@ -14,14 +14,9 @@ public class AuthenticationService {
      * Return false in any other cases.
      */
     public boolean login(String email, String password) {
-        User[] users = UserService.getUsers();
-        int counter = 0;
-        for (User user : users) {
-            if (email.equals(user.getEmail()) && password.equals(user.getPassword())) {
-                counter++;
-            }
-        }
-        if (counter > 0) {
+        UserService userService = new UserService();
+        User user = userService.findByEmail(email);
+        if (user != null && user.getPassword().equals(password)) {
             return true;
         } else {
             return false;
