@@ -23,8 +23,7 @@ public class AuthenticationService {
         if (foundUser.getPassword() == password) {
             return true;
         }
-
-
+        
         return false;
     }
 }
