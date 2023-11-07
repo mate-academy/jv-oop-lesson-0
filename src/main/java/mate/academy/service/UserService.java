@@ -1,4 +1,5 @@
 package mate.academy.service;
+
 import java.util.Objects;
 import mate.academy.model.User;
 
