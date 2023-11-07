@@ -15,7 +15,7 @@ public class UserService {
      * Return <code>null</code> if there is no suitable user
      */
     public User findByEmail(String email) {
-        for (User obj: users) {
+        for (User user: users) {
             if (obj.getEmail().equals(email)) {
                 return obj;
             }
