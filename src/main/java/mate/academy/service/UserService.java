@@ -1,5 +1,5 @@
 package mate.academy.service;
-
+import java.util.Objects;
 import mate.academy.model.User;
 
 public class UserService {
@@ -15,6 +15,11 @@ public class UserService {
      * Return <code>null</code> if there is no suitable user
      */
     public User findByEmail(String email) {
+        for (User user: users) {
+            if (Objects.equals(user.getEmail(), email)) {
+                return user;
+            }
+        }
         return null;
     }
 }
