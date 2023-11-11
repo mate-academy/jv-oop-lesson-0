@@ -1,8 +1,8 @@
 package mate.academy.service;
 
-import mate.academy.model.User;
-
 import static mate.academy.service.UserService.users;
+
+import mate.academy.model.User;
 
 public class AuthenticationService {
     /**
@@ -17,7 +17,8 @@ public class AuthenticationService {
      */
     public boolean login(String email, String password) {
         for (User confirmUser : users) {
-            if (confirmUser.getEmail().equals(email) && confirmUser.getPassword().equals(password)) {
+            if (confirmUser.getEmail().equals(email)
+                    && confirmUser.getPassword().equals(password)) {
                 return true;
             }
         }
