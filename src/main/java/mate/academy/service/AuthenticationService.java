@@ -1,10 +1,10 @@
 package mate.academy.service;
 
-import static mate.academy.service.UserService.users;
-
 import mate.academy.model.User;
 
 public class AuthenticationService {
+    private static final UserService userService = new UserService();
+
     /**
      * Imagine that some user wants to login to your site.
      * You should check if user credentials (login and password) are valid or not.
@@ -16,11 +16,9 @@ public class AuthenticationService {
      * Return false in any other cases.
      */
     public boolean login(String email, String password) {
-        for (User confirmUser : users) {
-            if (confirmUser.getEmail().equals(email)
-                    && confirmUser.getPassword().equals(password)) {
-                return true;
-            }
+        User user = userService.findByEmail(email);
+        if (user != null && user.getPassword().equals(password)) {
+            return true;
         }
         return false;
     }
