@@ -16,11 +16,4 @@ public class UserService {
         }
         return null;
     }
-
-    public boolean findByPassword(String password, String userPassword) {
-        if (password.equals(userPassword) && !password.equals(null)) {
-            return true;
-        }
-        return false;
-    }
 }
