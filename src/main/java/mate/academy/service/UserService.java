@@ -7,8 +7,6 @@ public class UserService {
     private static final User[] users = new User[] {
             new User("bob@i.ua", "1234"),
             new User("alice@i.ua", "1234"),
-//            new User("john@i.ua","1234"),
-//            new User("bob@i.ua","qwerty")
     };
 
     /**
@@ -26,6 +24,4 @@ public class UserService {
         return null;
     }
 }
-
-
 
