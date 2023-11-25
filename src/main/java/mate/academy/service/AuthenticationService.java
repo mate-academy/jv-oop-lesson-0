@@ -1,17 +1,11 @@
 package mate.academy.service;
 
-import java.util.Optional;
-import mate.academy.model.User;
-
 public class AuthenticationService {
+    private final UserService userService = new UserService();
+
     public boolean login(String email, String password) {
-        UserService userService = new UserService();
-        Optional<User> byEmail = userService.findByEmail(email);
-        Optional<User> byPassword = userService.findByPassword(password);
-        if (byEmail.isEmpty() || byPassword.isEmpty()) {
-            return false;
-        }
-        return email.equals(byEmail.get().getEmail())
-                && password.equals(byPassword.get().getPassword());
+        return userService.findByEmail(email)
+                .filter(user -> password.equals(user.getPassword()))
+                .isPresent();
     }
 }

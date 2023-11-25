@@ -17,13 +17,4 @@ public class UserService {
         }
         return Optional.empty();
     }
-
-    public Optional<User> findByPassword(String password) {
-        for (User user : users) {
-            if (user.getPassword().equals(password)) {
-                return Optional.of(user);
-            }
-        }
-        return Optional.empty();
-    }
 }
