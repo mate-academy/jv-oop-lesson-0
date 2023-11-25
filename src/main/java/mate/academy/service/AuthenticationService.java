@@ -19,6 +19,6 @@ public class AuthenticationService extends UserService {
         if (user == null) {
             return false;
         }
-        return user.getEmail().equals(email) && user.getPassword().equals(password);
+        return user.getPassword().equals(password);
     }
 }
