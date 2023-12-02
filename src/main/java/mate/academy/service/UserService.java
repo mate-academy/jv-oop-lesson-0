@@ -15,6 +15,13 @@ public class UserService {
      * Return <code>null</code> if there is no suitable user
      */
     public User findByEmail(String email) {
+        User user;
+        for (int i = 0; i < users.length; i++) {
+            user = users[i];
+            if (email.equals(user.getEmail())) {
+                return user;
+            }
+        }
         return null;
     }
 }
