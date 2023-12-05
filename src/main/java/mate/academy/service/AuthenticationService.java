@@ -1,5 +1,7 @@
 package mate.academy.service;
 
+import mate.academy.model.User;
+
 public class AuthenticationService extends UserService {
     /**
      * Imagine that some user wants to login to your site.
@@ -11,8 +13,9 @@ public class AuthenticationService extends UserService {
      * Return false in any other cases.
      */
     public boolean login(String email, String password) {
-        if (findByEmail(email) != null) {
-            return findByEmail(email).getPassword().equals(password);
+        User user = findByEmail(email);
+        if (user != null) {
+            return user.getPassword().equals(password);
         }
         return false;
     }
