@@ -1,6 +1,5 @@
 package mate.academy.service;
 
-import java.util.Objects;
 import mate.academy.model.User;
 
 public class UserService {
@@ -18,7 +17,7 @@ public class UserService {
      */
     public User findByEmail(String email) {
         for (User user : users) {
-            if (Objects.equals(user.getEmail(), email)) {
+            if (user.getEmail().equals(email)) {
                 return user;
             }
         }
