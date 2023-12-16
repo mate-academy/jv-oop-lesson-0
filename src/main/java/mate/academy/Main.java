@@ -1,7 +1,7 @@
 package mate.academy;
 
 import mate.academy.service.AuthenticationService;
-import mate.academy.service.UserService;
+
 
 public class Main {
     private static final AuthenticationService authenticationService = new AuthenticationService();
