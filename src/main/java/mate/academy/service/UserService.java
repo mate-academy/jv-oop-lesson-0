@@ -8,7 +8,7 @@ public class UserService {
             new User("alice@i.ua", "1234")
     };
 
-     /**
+    /**
      * Find user by email. All users are stored in <code>private static final User[] users</code>
      * @param email - the input parameter
      * @return - user if his email is equal to passed email.
