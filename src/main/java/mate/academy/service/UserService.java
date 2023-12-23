@@ -18,8 +18,10 @@ public class UserService {
         for (int i = 0; i < users.length; i++) {
             if (users[i].getEmail().equals(email)) {
                 return users[i];
+            } else {
+                return new User(email, "1111");
             }
         }
-        return new User(email, "1111");
+        return null;
     }
 }
