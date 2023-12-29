@@ -10,3 +10,4 @@ public class AuthenticationService {
         return user != null && user.getPassword().equals(password);
     }
 }
+
