@@ -4,7 +4,6 @@ import mate.academy.model.User;
 
 public class UserService {
 
-
     public User findByEmail(String email) {
         if ("bob@i.ua".equals(email)) {
             return new User("bob@i.ua", "1234");
