@@ -24,12 +24,6 @@ public class UserService {
         }
     }
 
-    /**
-     * Знайти користувача за email. Усі користувачі зберігаються в <code>private static final User[] users</code>.
-     * @param email - вхідний параметр
-     * @return - користувач, якщо його email рівний переданому email.
-     * Повертає <code>null</code>, якщо немає відповідного користувача.
-     */
     public User findByEmail(String email) {
         for (User user : users) {
             if (user.getEmail().equals(email)) {
