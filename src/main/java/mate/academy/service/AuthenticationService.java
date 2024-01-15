@@ -6,7 +6,7 @@ public class AuthenticationService {
     private final UserService userService;
 
     public AuthenticationService() {
-        this.userService = new UserService(new User[]{});
+        this.userService = new UserService();
     }
 
     public AuthenticationService(UserService userService) {
