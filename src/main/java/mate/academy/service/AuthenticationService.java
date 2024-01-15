@@ -3,13 +3,15 @@ package mate.academy.service;
 import mate.academy.model.User;
 
 public class AuthenticationService {
-    private UserService userService;
+    private final UserService userService;
 
     public AuthenticationService() {
+
         this.userService = new UserService();
     }
 
     public AuthenticationService(UserService userService) {
+
         this.userService = userService;
     }
 
