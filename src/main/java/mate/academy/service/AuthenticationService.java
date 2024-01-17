@@ -1,10 +1,10 @@
 package mate.academy.service;
 
-import java.util.Objects;
 import mate.academy.model.User;
 
 public class AuthenticationService {
     private boolean existUser;
+    private UserService usersService = new UserService();
 
     /**
      * Imagine that some user wants to login to your site.
@@ -16,9 +16,14 @@ public class AuthenticationService {
      * Return false in any other cases.
      */
     public boolean login(String email, String password) {
-        UserService usersService = new UserService();
         User user = usersService.findByEmail(email);
-        existUser = Objects.equals(user.getPassword(), password);
+        if (user != null) {
+            if (user.getPassword() == password) {
+                existUser = true;
+            }
+        } else {
+            existUser = false;
+        }
         return existUser;
     }
 }
