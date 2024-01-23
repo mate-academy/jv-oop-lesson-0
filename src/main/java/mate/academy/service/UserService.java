@@ -7,6 +7,8 @@ public class UserService {
             new User("bob@i.ua", "1234"),
             new User("alice@i.ua", "1234")
     };
+    private int age;
+    private String naming;
 
     /**
      * Find user by email. All users are stored in <code>private static final User[] users</code>
@@ -14,7 +16,13 @@ public class UserService {
      * @return - user if his email is equal to passed email.
      * Return <code>null</code> if there is no suitable user
      */
+
     public User findByEmail(String email) {
+        for (User currentUser : users) {
+            if (currentUser.getEmail().equals(email)) {
+                return currentUser;
+            }
+        }
         return null;
     }
 }
