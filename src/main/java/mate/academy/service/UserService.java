@@ -22,10 +22,10 @@ public class UserService {
         for (User user : users) {
             if (email.equals(user.getEmail())) {
                 return user;
-            } else {
-                return null;
             }
         }
+
         return null;
     }
+
 }
