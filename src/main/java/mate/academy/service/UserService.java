@@ -2,8 +2,6 @@ package mate.academy.service;
 
 import java.util.Arrays;
 import java.util.Objects;
-import java.util.Optional;
-
 import mate.academy.model.User;
 
 public class UserService {
@@ -23,6 +21,6 @@ public class UserService {
         return Arrays.stream(users)
                 .filter(Objects::nonNull)
                 .filter(user -> email.equals(user.getEmail()))
-                .findFirst().orElseGet(() -> null);
+                .findFirst().orElse(null);
     }
 }
