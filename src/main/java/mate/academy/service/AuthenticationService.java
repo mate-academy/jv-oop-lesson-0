@@ -13,6 +13,7 @@ public class AuthenticationService {
 
     private UserService userService = new UserService();
 
+    //check email and password if it's exist
     public boolean login(String email, String password) {
         if (userService.findByEmail(email) != null
                 && userService.findByEmail(email).getPassword() == password) {
