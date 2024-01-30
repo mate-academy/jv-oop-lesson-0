@@ -15,7 +15,7 @@ public class UserService {
      * Return <code>null</code> if there is no suitable user
      */
     public User findByEmail(String email) {
-        if (email.isEmpty()) {
+        if (email == null || email.isEmpty()) {
             return null;
         }
 
@@ -27,5 +27,4 @@ public class UserService {
 
         return null;
     }
-
 }
