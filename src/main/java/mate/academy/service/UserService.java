@@ -1,11 +1,14 @@
 package mate.academy.service;
 
+import java.util.Arrays;
+import java.util.NoSuchElementException;
+
 import mate.academy.model.User;
 
 public class UserService {
     private static final User[] users = new User[] {
-            new User("bob@i.ua", "1234"),
-            new User("alice@i.ua", "1234")
+        new User("bob@i.ua", "1234"),
+        new User("alice@i.ua", "1234")
     };
 
     /**
@@ -15,6 +18,11 @@ public class UserService {
      * Return <code>null</code> if there is no suitable user
      */
     public User findByEmail(String email) {
-        return null;
+        try {
+            return Arrays.stream(users).filter(user -> user.getEmail().equals(email))
+              .findFirst().get();
+        } catch (NoSuchElementException exception) {
+            return null;
+        }
     }
 }
