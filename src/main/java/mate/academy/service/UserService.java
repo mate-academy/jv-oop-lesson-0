@@ -2,7 +2,6 @@ package mate.academy.service;
 
 import java.util.Arrays;
 import java.util.NoSuchElementException;
-
 import mate.academy.model.User;
 
 public class UserService {
