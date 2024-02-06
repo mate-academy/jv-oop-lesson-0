@@ -15,15 +15,11 @@ public class AuthenticationService {
     private final UserService userService = new UserService();
 
     public boolean login(String email, String password) {
-        try {
-            User approvedUser = userService.findByEmail(email);
-            if (password.equals(approvedUser.getPassword())) {
-                return true;
-            }
-        } catch (NullPointerException e) {
+        User approvedUser = userService.findByEmail(email);
+        if (approvedUser != null && password.equals(approvedUser.getPassword())) {
+            return true;
+        } else {
             return false;
         }
-        return false;
     }
-
 }
