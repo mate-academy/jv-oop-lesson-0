@@ -7,6 +7,18 @@ public class UserService {
             new User("bob@i.ua", "1234"),
             new User("alice@i.ua", "1234")
     };
+    public User[] getUsers() {
+        return users;
+    }
+    public User findUserByEmail(String email) {
+        for (User user : users) {
+            if (user.getEmail().equals(email)) {
+                return user;
+            }
+        }
+        return null;
+    }
+
 
     /**
      * Find user by email. All users are stored in <code>private static final User[] users</code>
