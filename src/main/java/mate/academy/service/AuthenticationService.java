@@ -4,7 +4,7 @@ import mate.academy.model.User;
 
 public class AuthenticationService {
 
-    User user;
+    private User user;
 
     /**
      * Imagine that some user wants to login to your site.
