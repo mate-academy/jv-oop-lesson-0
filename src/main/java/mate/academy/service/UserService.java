@@ -17,6 +17,7 @@ public class UserService {
     public static User[] getUsers() {
         return users;
     }
+
     public User findByEmail(String email) {
         User[] findUser = UserService.getUsers();
         for (int i = 0; i < findUser.length; i++) {
