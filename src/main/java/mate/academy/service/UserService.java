@@ -1,6 +1,5 @@
 package mate.academy.service;
 
-import java.util.Arrays;
 import mate.academy.model.User;
 
 public class UserService {
