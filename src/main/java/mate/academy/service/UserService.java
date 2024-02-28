@@ -17,7 +17,7 @@ public class UserService {
      */
     public User findByEmail(String email) {
         return Arrays.stream(users)
-                .filter(u -> u.getEmail().equals(email))
+                .filter(user -> user.getEmail().equals(email))
                 .findFirst()
                 .orElse(null);
     }
