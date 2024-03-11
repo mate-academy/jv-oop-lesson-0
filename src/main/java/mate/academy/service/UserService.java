@@ -17,10 +17,10 @@ public class UserService {
      */
     public static User findByEmail(String email) {
         for (int i = 0; i < users.length; i++) {
-            if (users[i].getEmail().equals(email))
+            if (users[i].getEmail().equals(email)) {
                 return users[i];
             }
-            return null;
         }
+        return null;
     }
-
+}
