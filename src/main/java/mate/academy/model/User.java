@@ -1,6 +1,8 @@
 package mate.academy.model;
 
-public class User {
+import mate.academy.service.UserService;
+
+public class User extends UserService {
     private String email;
     private String password;
 
