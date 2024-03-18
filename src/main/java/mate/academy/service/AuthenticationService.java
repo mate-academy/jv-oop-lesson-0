@@ -1,6 +1,6 @@
 package mate.academy.service;
 
-import java.util.Objects;
+import mate.academy.model.User;
 
 public class AuthenticationService {
     /**
@@ -15,10 +15,7 @@ public class AuthenticationService {
     private UserService userService = new UserService();
 
     public boolean login(String email, String password) {
-        if (!Objects.equals(userService.findByEmail(email).getEmail(), email)
-                || !Objects.equals(userService.findByEmail(email).getPassword(), password)) {
-            return false;
-        }
-        return true;
+        User user = userService.findByEmail(email);
+        return user.getEmail().equals(email) && user.getPassword().equals(password);
     }
 }

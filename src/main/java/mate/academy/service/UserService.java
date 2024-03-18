@@ -16,7 +16,7 @@ public class UserService {
      * Return <code>null</code> if there is no suitable user
      */
     public User findByEmail(String email) {
-        User returnUser = new User("USER NOT CONTAIN", "USER NOT CONTAIN");
+        User returnUser = null;
         for (User user : users) {
             if (email.equals(user.getEmail())) {
                 returnUser = user;
