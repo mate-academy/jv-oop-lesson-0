@@ -15,7 +15,7 @@ public class AuthenticationService {
      */
     private final UserService userService;
 
-    public AuthenticationService () {
+    public AuthenticationService() {
         this.userService = new UserService();
     }
 
