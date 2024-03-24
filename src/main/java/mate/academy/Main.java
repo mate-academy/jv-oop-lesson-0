@@ -6,10 +6,12 @@ public class Main {
     private static final AuthenticationService authenticationService = new AuthenticationService();
 
     public static void main(String[] args) {
-        test("bob@i.ua", "1234", true);
-        test("alice@i.ua", "1234", true);
-        test("john@i.ua", "1234", false);
-        test("bob@i.ua", "qwerty", false);
+
+        test("bob@i.ua","1234",true);
+        test("alice@i.ua","1234",true);
+        test("john@i.ua","1234",false);
+        test("bob@i.ua","qwerty",false);
+
     }
 
     private static void test(String email, String password, boolean expected) {
