@@ -5,7 +5,8 @@ import mate.academy.service.UserService;
 
 public class Main {
     private static final UserService userService = new UserService();
-    private static final AuthenticationService authenticationService = new AuthenticationService(userService);
+    private static final AuthenticationService authenticationService
+            = new AuthenticationService(userService);
 
     public static void main(String[] args) {
         test("bob@i.ua", "1234", true);
