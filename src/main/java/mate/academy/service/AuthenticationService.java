@@ -10,7 +10,7 @@ public class AuthenticationService extends UserService {
      * @return true if user by email exists and passed password is equal to user's password.
      * Return false in any other cases.
      */
-    public boolean login(String email, String password) throws NullPointerException {
+    public boolean login(String email, String password) {
         try {
             return findByEmail(email).getPassword().equals(password);
         } catch (NullPointerException exception) {
