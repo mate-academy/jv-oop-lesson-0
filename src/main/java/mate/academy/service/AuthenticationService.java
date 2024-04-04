@@ -19,8 +19,7 @@ public class AuthenticationService {
             return false;
         }
 
-        User user = this.userService.findByEmail(email);
-
+        User user = userService.findByEmail(email);
         return user != null && user.getPassword().equals(password);
     }
 }
