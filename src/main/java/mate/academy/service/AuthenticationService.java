@@ -19,6 +19,5 @@ public class AuthenticationService {
         }   catch (NullPointerException exception) {
             return false;
         }
-
     }
 }
