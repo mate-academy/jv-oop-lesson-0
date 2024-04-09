@@ -14,7 +14,6 @@ public class AuthenticationService {
      */
     public boolean login(String email, String password) {
         UserService userService = new UserService();
-        User user;
         if (userService.findByEmail(email) != null) {
             if (userService.findByEmail(email).getPassword().equals(password)) {
                 return true;
