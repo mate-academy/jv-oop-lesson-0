@@ -19,7 +19,7 @@ public class UserService {
             if (userEmail.equals(email)) {
                 return userEmail;
             }
-        }
+
         return null;
     }
 }
