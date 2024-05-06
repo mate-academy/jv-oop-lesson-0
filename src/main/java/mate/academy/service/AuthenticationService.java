@@ -4,6 +4,7 @@ import mate.academy.model.User;
 
 public class AuthenticationService {
     private UserService userService;
+
     public AuthenticationService() {
         userService = new UserService();
     }
