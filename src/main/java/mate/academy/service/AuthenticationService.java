@@ -1,6 +1,8 @@
 package mate.academy.service;
 
 public class AuthenticationService {
+    private UserService service;
+
     /**
      * Imagine that some user wants to login to your site.
      * You should check if user credentials (login and password) are valid or not.
@@ -11,6 +13,10 @@ public class AuthenticationService {
      * Return false in any other cases.
      */
     public boolean login(String email, String password) {
-        return false;
+        try {
+            return service.findByEmail(email).getPassword().equals(password);
+        } catch (RuntimeException e) {
+            return false;
+        }
     }
 }
