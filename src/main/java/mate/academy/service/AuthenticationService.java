@@ -13,9 +13,10 @@ public class AuthenticationService {
     private UserService userService = new UserService();
 
     public boolean login(String email, String password) {
+        boolean isValidCredentials = false;
         if (userService.findByEmail(email) != null) {
-            return userService.findByEmail(email).getPassword().equals(password);
+            isValidCredentials = userService.findByEmail(email).getPassword().equals(password);
         }
-        return false;
+        return isValidCredentials;
     }
 }
