@@ -3,16 +3,13 @@ package mate.academy.service;
 import mate.academy.model.User;
 
 public class UserService {
-    private static UserService instance;
-
     private static final User[] users = new User[] {
             new User("bob@i.ua", "1234"),
             new User("alice@i.ua", "1234"),
             new User("john@i.ua", "6789")
     };
 
-    private UserService() {
-    }
+    private static final UserService userService = new UserService();
 
     /**
      * Find user by email. All users are stored in <code>private static final User[] users</code>
@@ -30,10 +27,7 @@ public class UserService {
         return null;
     }
 
-    public static UserService getInstance() {
-        if (instance == null) {
-            instance = new UserService();
-        }
-        return instance;
+    public static UserService getUserService() {
+        return userService;
     }
 }
