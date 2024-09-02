@@ -8,12 +8,15 @@ public class AuthenticationService {
     public String getValidEmailFirst() {
         return validEmailFirst;
     }
+
     public String getValidEmailSecond() {
         return validEmailSecond;
     }
+
     public String getValidPasswordFirst() {
         return validPasswordFirst;
     }
+
     /**
      * Imagine that some user wants to login to your site.
      * You should check if user credentials (login and password) are valid or not.
