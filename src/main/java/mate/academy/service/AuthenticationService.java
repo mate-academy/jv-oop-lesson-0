@@ -1,10 +1,19 @@
 package mate.academy.service;
 
 public class AuthenticationService {
-    String validEmailFirst = "bob@i.ua";
-    String validEmailSecond = "alice@i.ua";
-    String validPasswordFirst = "1234";
+    private String validEmailFirst = "bob@i.ua";
+    private String validEmailSecond = "alice@i.ua";
+    private String validPasswordFirst = "1234";
 
+    public String getValidEmailFirst() {
+        return validEmailFirst;
+    }
+    public String getValidEmailSecond() {
+        return validEmailSecond;
+    }
+    public String getValidPasswordFirst() {
+        return validPasswordFirst;
+    }
     /**
      * Imagine that some user wants to login to your site.
      * You should check if user credentials (login and password) are valid or not.
