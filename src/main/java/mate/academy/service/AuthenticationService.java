@@ -1,21 +1,8 @@
 package mate.academy.service;
 
+import mate.academy.model.User;
+
 public class AuthenticationService {
-    private String validEmailFirst = "bob@i.ua";
-    private String validEmailSecond = "alice@i.ua";
-    private String validPasswordFirst = "1234";
-
-    public String getValidEmailFirst() {
-        return validEmailFirst;
-    }
-
-    public String getValidEmailSecond() {
-        return validEmailSecond;
-    }
-
-    public String getValidPasswordFirst() {
-        return validPasswordFirst;
-    }
 
     /**
      * Imagine that some user wants to login to your site.
@@ -28,12 +15,8 @@ public class AuthenticationService {
      * Return false in any other cases.
      */
     public boolean login(String email, String password) {
-        if (email.equals(validEmailFirst) && password.equals(validPasswordFirst)) {
-            return true;
-        }
-        if (email.equals(validEmailSecond) && password.equals(validPasswordFirst)) {
-            return true;
-        }
-        return false;
+        UserService userService = new UserService();
+        User user = userService.findByEmail(email);
+        return user != null && user.getPassword().equals(password);
     }
 }
