@@ -19,7 +19,7 @@ public class AuthenticationService {
         if (user != null && user.getPassword().equals(password)) {
             return true;
         }
-            return false;
+        return false;
     }
 }
 
