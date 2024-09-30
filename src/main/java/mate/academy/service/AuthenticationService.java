@@ -15,12 +15,13 @@ public class AuthenticationService {
     private UserService userService = new UserService();
 
     public boolean login(String email, String password) {
+        boolean userExist = false;
         User user = userService.findByEmail(email);
         if (user != null) {
             if (user.getPassword().equals(password)) {
-                return true;
+                userExist = true;
             }
         }
-        return false;
+        return userExist;
     }
 }
