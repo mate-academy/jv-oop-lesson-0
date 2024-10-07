@@ -1,9 +1,8 @@
 package mate.academy.service;
 
-import mate.academy.model.User;
-
 import java.util.Arrays;
 import java.util.Optional;
+import mate.academy.model.User;
 
 public class UserService {
     private static final User[] users = new User[] {
