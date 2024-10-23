@@ -21,4 +21,3 @@ public class AuthenticationService extends UserService {
         return false;
     }
 }
-
