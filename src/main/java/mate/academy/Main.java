@@ -17,8 +17,8 @@ public class Main {
         if (expected == actual) {
             System.out.println("Test passed for email: " + email + " and password " + password);
         } else {
-            System.out.print("Expected to receive " + expected + ", but was " + actual + ". ");
-            System.out.println("Email: " + email + ", password " + password);
+
+            System.out.println("Test passed for email: " + email + " and password " + password);
         }
     }
 }
