@@ -1,8 +1,8 @@
 package mate.academy.model;
 
 public class User {
-    private String email;
-    private String password;
+    private final String email;
+    private final String password;
 
     public User(String email, String password) {
         this.email = email;
@@ -14,6 +14,7 @@ public class User {
     }
 
     public String getPassword() {
+
         return password;
     }
 }
