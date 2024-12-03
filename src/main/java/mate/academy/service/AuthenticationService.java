@@ -17,10 +17,10 @@ public class AuthenticationService {
         User user = serv.findByEmail(email);
         if (user != null) {
             if (user.getPassword().equals(password)) {
-            return true;
+                return true;
             }
         }
-        System.out.println ("No user with this e-mail is found");
+        System.out.println("No user with this e-mail is found");
         return false;
     }
 }
