@@ -9,6 +9,7 @@ import java.util.List;
 public class Main {
     private static final AuthenticationService authenticationService;
 
+
     static {
         List<User> users = Arrays.asList(
                 new User("bob@i.ua", "1234"),
