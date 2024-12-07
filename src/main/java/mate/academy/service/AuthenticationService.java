@@ -16,7 +16,7 @@ public class AuthenticationService {
     private UserService userService;
 
     public AuthenticationService() {
-        userService = new UserService();
+        this.userService = new UserService();
     }
 
     public boolean login(String email, String password) {
