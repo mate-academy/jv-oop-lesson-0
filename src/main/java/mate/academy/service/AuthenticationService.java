@@ -13,14 +13,13 @@ public class AuthenticationService {
      * Return false in any other cases.
      */
     public boolean login(String email, String password) {
-        UserService serv = new UserService();
-        User user = serv.findByEmail(email);
+        UserService newService = new UserService();
+        User user = newService.findByEmail(email);
         if (user != null) {
             if (user.getPassword().equals(password)) {
                 return true;
             }
         }
-        System.out.println("No user with this e-mail is found");
         return false;
     }
 }
