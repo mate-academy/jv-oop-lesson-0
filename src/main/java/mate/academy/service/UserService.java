@@ -18,7 +18,6 @@ public class UserService {
         for (User user : users) {
             if (user.getEmail().equals(email)) { return user; }
         }
-
         return null;
     }
 }
