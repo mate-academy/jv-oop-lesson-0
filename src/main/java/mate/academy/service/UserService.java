@@ -14,6 +14,9 @@ public class UserService {
      * @return - user if his email is equal to passed email.
      * Return <code>null</code> if there is no suitable user
      */
+
+
+
     public User findByEmail(String email) {
         if (email == null) {
             return null;
