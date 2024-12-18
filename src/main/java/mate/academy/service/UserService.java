@@ -17,19 +17,19 @@ public class UserService {
      */
     public User findByEmail(String email) {
         for (User tempUser : users) {
-            if (!tempUser.getEmail().equals(email)) {
-                break;
+            if (tempUser.getEmail().equals(email)) {
+                return tempUser;
             }
         }
         return null;
     }
 
-    public boolean checkEmailAndPassword(String password, String email) {
+    public User checkingPassword(String password) {
         for (User tempUser : users) {
-            if (tempUser.getPassword().equals(password) && tempUser.getEmail().equals(email)) {
-                return true;
+            if (tempUser.getPassword().equals(password)) {
+                return tempUser;
             }
         }
-        return false;
+        return null;
     }
 }
