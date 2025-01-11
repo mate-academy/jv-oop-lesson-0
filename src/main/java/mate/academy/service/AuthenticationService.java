@@ -11,6 +11,11 @@ public class AuthenticationService {
      * Return false in any other cases.
      */
     public boolean login(String email, String password) {
-        return false;
+        if (email.equals("bob@i.ua") && password.equals("1234") || email.equals("alice@i.ua")
+                && password.equals("1234")) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
