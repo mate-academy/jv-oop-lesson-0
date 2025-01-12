@@ -9,10 +9,6 @@ public class User {
         this.password = password;
     }
 
-    public User(String email) {
-        this.email = email;
-    }
-
     public String getEmail() {
         return email;
     }
