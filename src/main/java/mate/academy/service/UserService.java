@@ -22,13 +22,4 @@ public class UserService {
         }
         return null;
     }
-
-    public static String getUserEmail(int id) {
-        return users[id].getEmail();
-    }
-
-    public static String getUserPassword(int id) {
-        return users[id].getPassword();
-    }
-
 }
