@@ -11,10 +11,10 @@ public class Main {
         test("john@i.ua", "1234", false);
         test("bob@i.ua", "qwerty", false);
     }
-
     private static void test(String email, String password, boolean expected) {
         boolean actual = authenticationService.login(email, password);
-        if (expected == actual) {
+
+        if (expected && actual) {
             System.out.println("Test passed for email: " + email + " and password " + password);
         } else {
             System.out.print("Expected to receive " + expected + ", but was " + actual + ". ");
