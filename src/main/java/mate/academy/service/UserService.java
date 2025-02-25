@@ -8,7 +8,7 @@ public class UserService {
             new User("alice@i.ua", "1234")
     };
 
-    public static User findByEmail(String email) {
+    public User findByEmail(String email) {
         for (User user : users) {
             if (user.getEmail().equals(email)) {
                 return user;
