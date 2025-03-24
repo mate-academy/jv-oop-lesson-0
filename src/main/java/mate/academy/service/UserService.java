@@ -1,21 +1,15 @@
 package mate.academy.service;
 
-import java.util.List;
 import mate.academy.model.User;
 
 public class UserService {
-    private List<User> users;
-
-    public UserService() {
-        users = List.of(
-                new User("bob@i.ua", "1234"),
-                new User("alice@i.ua", "1234"),
-                new User("john@i.ua", "5678")
-        );
-    }
+    private static final User[] users = new User[] {
+            new User("bob@i.ua", "1234"),
+            new User("alice@i.ua", "1234")
+    };
 
     public User findByEmail(String email) {
-        for (User user : users) {
+        for (User user : UserService.users) {
             if (user.getEmail().equals(email)) {
                 return user;
             }
