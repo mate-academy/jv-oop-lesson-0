@@ -9,12 +9,22 @@ public class UserService {
     };
 
     /**
-     * Find user by email. All users are stored in <code>private static final User[] users</code>
-     * @param email - the input parameter
-     * @return - user if his email is equal to passed email.
-     * Return <code>null</code> if there is no suitable user
+     * Знаходить користувача за email у масиві `users`.
+     * @param email - вхідний параметр (email користувача)
+     * @return - повертає користувача, якщо його email співпадає.
+     * Повертає `null`, якщо користувача не знайдено.
      */
     public User findByEmail(String email) {
-        return null;
+        if (email == null) {
+            return null; // Захист від null-значень
+        }
+
+        for (User user : users) {
+            if (user.getEmail().equals(email)) {
+                return user; // Знайдено користувача
+            }
+        }
+
+        return null; // Користувача не знайдено
     }
 }
