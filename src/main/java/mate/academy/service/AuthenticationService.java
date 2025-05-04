@@ -10,7 +10,17 @@ public class AuthenticationService {
      * @return true if user by email exists and passed password is equal to user's password.
      * Return false in any other cases.
      */
+    private UserService userService = new UserService();
+
     public boolean login(String email, String password) {
+        // I'm not sure what better, to call 2 times find by email
+        // methoud, or made an instance of find by email result?
+        if (userService.findByEmail(email) != null) {
+            if (userService.findByEmail(email).getPassword().equals(password)) {
+                return true;
+            }
+        }
+
         return false;
     }
 }
