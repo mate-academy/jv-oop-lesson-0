@@ -1,10 +1,23 @@
 package mate.academy;
-
+import mate.academy.model.User;
 import mate.academy.service.AuthenticationService;
+import mate.academy.service.UserService;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class Main {
-    private static final AuthenticationService authenticationService = new AuthenticationService();
+    private static final AuthenticationService authenticationService;
 
+    static {
+        List<User> users = Arrays.asList(
+                new User("bob@i.ua", "1234"),
+                new User("alice@i.ua", "1234"),
+                new User("john@i.ua", "4321")
+        );
+        UserService userService = new UserService(users);
+        authenticationService = new AuthenticationService(userService);
+    }
     public static void main(String[] args) {
         test("bob@i.ua", "1234", true);
         test("alice@i.ua", "1234", true);
