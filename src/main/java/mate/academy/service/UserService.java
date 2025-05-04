@@ -1,5 +1,6 @@
 package mate.academy.service;
 
+import java.util.Arrays;
 import mate.academy.model.User;
 
 public class UserService {
@@ -15,6 +16,9 @@ public class UserService {
      * Return <code>null</code> if there is no suitable user
      */
     public User findByEmail(String email) {
-        return null;
+        return Arrays.stream(users)
+            .filter(u -> u.getEmail().equals(email))
+            .findAny()
+            .orElse(null);
     }
 }
