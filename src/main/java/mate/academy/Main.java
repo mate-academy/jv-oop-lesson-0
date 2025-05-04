@@ -1,10 +1,9 @@
 package mate.academy;
 
 import mate.academy.service.AuthenticationService;
+import mate.academy.service.UserService;
 
 public class Main {
-    private static final AuthenticationService authenticationService = new AuthenticationService();
-
     public static void main(String[] args) {
         test("bob@i.ua", "1234", true);
         test("alice@i.ua", "1234", true);
@@ -13,6 +12,9 @@ public class Main {
     }
 
     private static void test(String email, String password, boolean expected) {
+        UserService userService = new UserService();
+        AuthenticationService authenticationService = new AuthenticationService(userService);
+
         boolean actual = authenticationService.login(email, password);
         if (expected == actual) {
             System.out.println("Test passed for email: " + email + " and password " + password);
