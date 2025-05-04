@@ -9,12 +9,19 @@ public class UserService {
     };
 
     /**
-     * Find user by email. All users are stored in <code>private static final User[] users</code>
+     * Find user by email. All users are sto^red in <code>private static final User[] users</code>
      * @param email - the input parameter
      * @return - user if his email is equal to passed email.
      * Return <code>null</code> if there is no suitable user
      */
     public User findByEmail(String email) {
+
+        for (User us:
+                users) {
+            if (us.getEmail() == email) {
+                return us;
+            }
+        }
         return null;
     }
 }
