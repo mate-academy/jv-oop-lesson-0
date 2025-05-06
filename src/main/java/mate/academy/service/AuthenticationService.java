@@ -7,6 +7,7 @@ public class AuthenticationService {
 
     // Безаргументний конструктор для сумісності з Main
     public AuthenticationService() {
+
         this.userService = new UserService();
     }
 
