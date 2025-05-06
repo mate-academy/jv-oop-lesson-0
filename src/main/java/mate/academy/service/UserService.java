@@ -15,21 +15,12 @@ public class UserService {
      * @return - user if his email is equal to passed email.
      * Return <code>null</code> if there is no suitable user
      */
-<<<<<<< HEAD
-  public User findByEmail(String email) {
-    for (User user : users) {
-        if (user.getEmail().equals(email)) {
-            return user;
-        }
-     }
-=======
     public User findByEmail(String email) {
         for (User user : users) {
             if (user.getEmail().equals(email)) {
                 return user;
             }
         }
->>>>>>> 036beb8 (Create maven.yml)
         return null;
     }
 }
