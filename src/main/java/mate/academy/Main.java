@@ -19,6 +19,7 @@ public class Main {
         } else {
             System.out.print("Expected to receive " + expected + ", but was " + actual + ". ");
             System.out.println("Email: " + email + ", password " + password);
+
         }
     }
 }
