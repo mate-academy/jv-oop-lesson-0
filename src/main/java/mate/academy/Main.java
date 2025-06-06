@@ -11,7 +11,7 @@ public class Main {
         test("john@i.ua", "1234", false);
         test("bob@i.ua", "qwerty", false);
     }
-
+    
     private static void test(String email, String password, boolean expected) {
         boolean actual = authenticationService.login(email, password);
         if (expected == actual) {
