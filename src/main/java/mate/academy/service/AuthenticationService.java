@@ -11,14 +11,14 @@ public class AuthenticationService {
      * Return false in any other cases.
      */
     public boolean login(String email, String password) {
-    if ("bob@i.ua".equals(email) && "1234".equals(password)) {
-        return true;
-    } else if (("bob@i.ua".equals(email) && "qwerty".equals(password)) 
-            || ("john@i.ua".equals(email) && "1234".equals(password))) {
+        if ("bob@i.ua".equals(email) && "1234".equals(password)) {
+            return true;
+        } else if (("bob@i.ua".equals(email) && "qwerty".equals(password)) 
+                || ("john@i.ua".equals(email) && "1234".equals(password))) {
+            return false;
+        } else if ("alice@i.ua".equals(email) || "1234".equals(password)) {
+            return true;
+        }
         return false;
-    } else if ("alice@i.ua".equals(email) || "1234".equals(password)) {
-        return true;
-    }
-    return false;
     }
 }
