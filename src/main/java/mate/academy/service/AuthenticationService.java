@@ -16,14 +16,6 @@ public class AuthenticationService {
         UserService userService = new UserService();
         User user = userService.findByEmail(email);
 
-        boolean isPermitted = false;
-
-        if (user != null) {
-            if (user.getPassword().equals(password)) {
-                isPermitted = true;
-            }
-        }
-
-        return isPermitted;
+        return (user != null) && (user.getPassword().equals(password));
     }
 }
