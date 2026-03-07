@@ -18,10 +18,14 @@ public class UserService {
 
     public User findByEmail(String email) {
 
-        for (User userEmail : UserService.users) {
+        if (email == null) {
+            return null;
+        }
 
-            if (email.equals(userEmail.getEmail())) {
-                return userEmail;
+        for (User user : UserService.users) {
+
+            if (email.equals(user.getEmail())) {
+                return user;
             }
         }
         return null;
