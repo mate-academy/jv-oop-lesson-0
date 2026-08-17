@@ -12,9 +12,10 @@ public class AuthenticationService {
      * @return true if user by email exists and passed password is equal to user's password.
      * Return false in any other cases.
      */
+    private static UserService userService = new UserService();
+
     public boolean login(String email, String password) {
-        UserService userService = new UserService();
-        User userExists = userService.findByEmail(email);
+        User userExists = this.userService.findByEmail(email);
 
         if (userExists != null && userExists.getPassword().equals(password)) {
             return true;
